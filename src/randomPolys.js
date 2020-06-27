@@ -1,5 +1,5 @@
 export class RandomPolygon {
-    constructor(length, max, epsilon=1) {
+    constructor(length, max, epsilon=4) {
         this.length = length;
         this.max = max;
         this.epsilon = epsilon;
