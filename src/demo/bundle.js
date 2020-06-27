@@ -22,7 +22,7 @@ var RandomPolygon = function RandomPolygon(length, max) {
     };
 
     for (var i = 0; i < _this.length; i++) {
-      var random = 1 - Math.pow(Math.random(), _this.epsilon);
+      var random = Math.pow(Math.random(), 1 / _this.epsilon);
       var angle = i * theta;
       var randomAngle = angle + random * theta;
       var absCosAngle = Math.abs(Math.cos(randomAngle));

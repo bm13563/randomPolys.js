@@ -12,7 +12,7 @@ export class RandomPolygon {
         const radius = this.max/ 2;
         const centre = {x: radius, y: radius};
         for (let i = 0; i < this.length; i++) {
-            var random = 1 - Math.pow(Math.random(), this.epsilon);
+            var random = Math.pow(Math.random(), 1 / this.epsilon);
             var angle = i * theta;
             var randomAngle = angle + (random * theta);
             var absCosAngle = Math.abs(Math.cos(randomAngle));
