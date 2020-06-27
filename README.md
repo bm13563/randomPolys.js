@@ -7,4 +7,4 @@ Considerably faster than angle ordering as in Pavel Valtr's implementation (see 
 
 Polygon examples:
 10 Points: 
-![picture](src/img/10_pts.png)
+![picture](src/img/10_pts.PNG)
