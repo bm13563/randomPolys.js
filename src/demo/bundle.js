@@ -85,7 +85,6 @@ var ctx = canvas.getContext('2d');
 var length = document.getElementById("points-range").value;
 var max = document.getElementById("max-range").value;
 var epsilon = document.getElementById("epsilon-range").value;
-console.log(length, max, epsilon);
 document.getElementById("points-value").innerHTML = length;
 document.getElementById("max-value").innerHTML = max;
 document.getElementById("epsilon-value").innerHTML = epsilon;
@@ -112,6 +111,12 @@ document.getElementById("epsilon-range").oninput = function () {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   epsilon = this.value;
   document.getElementById("epsilon-value").innerHTML = epsilon;
+  var polygon = new RandomPolygon(length, max, epsilon);
+  polygon.draw(ctx);
+};
+
+document.getElementById("new-polygon").onclick = function (e) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   var polygon = new RandomPolygon(length, max, epsilon);
   polygon.draw(ctx);
 };
