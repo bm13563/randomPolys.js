@@ -10,7 +10,7 @@ Considerably faster (albeit "less random") than angle ordering as in Pavel Valtr
 ```javascript
 var polygon = new RandomPolygon(count, max, epsilon);
 ```
-<strong>epsilon</strong> can be set to adjust the "regularity" of the polygon, where a higher epsilon tends towards a square. Default value is 1.
+Where <strong>epsilon</strong> can be set to adjust the "regularity" of the polygon, with a higher epsilon tending to a square. Default value is 1.
 
 # Polygon examples
 10 Points: 
