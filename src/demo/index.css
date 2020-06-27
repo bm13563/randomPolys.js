@@ -33,3 +33,7 @@
     background: #4CAF50;
     cursor: pointer;
   }
+
+  #reset {
+      margin-left: 15px;
+  }

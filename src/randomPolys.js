@@ -1,7 +1,8 @@
 export class RandomPolygon {
-    constructor(length, max, epsilon=4) {
+    constructor(length, xmax, ymax, epsilon=4) {
         this.length = length;
-        this.max = max;
+        this.xmax = xmax;
+        this.ymax = ymax;
         this.epsilon = epsilon;
         this.polygon = [];
         this.generatePolygon();
@@ -9,18 +10,17 @@ export class RandomPolygon {
 
     generatePolygon = () => {
         const theta = (360 / this.length) * (Math.PI/180);
-        const radius = this.max/ 2;
-        const centre = {x: radius, y: radius};
+        const centre = {x: this.xmax/ 2, y: this.ymax/ 2};
         for (let i = 0; i < this.length; i++) {
             var random = Math.pow(Math.random(), 1 / this.epsilon);
             var angle = i * theta;
             var randomAngle = angle + (random * theta);
             var absCosAngle = Math.abs(Math.cos(randomAngle));
             var absSinAngle = Math.abs(Math.sin(randomAngle));
-            if (this.max / 2*absSinAngle <= this.max / 2*absCosAngle){
-                var magnitude= this.max / 2 / absCosAngle;
+            if (this.xmax / 2*absSinAngle <= this.ymax / 2*absCosAngle){
+                var magnitude= this.xmax / 2 / absCosAngle;
             } else {
-                var magnitude= this.max / 2 / absSinAngle;
+                var magnitude= this.ymax / 2 / absSinAngle;
             }
             var xEdge = centre.x + Math.cos(randomAngle) * magnitude;
             var yEdge = centre.y + Math.sin(randomAngle) * magnitude;
@@ -31,13 +31,14 @@ export class RandomPolygon {
 
     draw = (ctx) => {
         const points = this.polygon;
-        const offset = (ctx.canvas.clientWidth - this.max) / 2; //TODO variable x and y dimensions
+        const xoffset = (ctx.canvas.clientWidth - this.xmax) / 2;
+        const yoffset = (ctx.canvas.clientWidth - this.ymax) / 2;
         ctx.lineWidth= 1;
         ctx.fillStyle = '#f00';
         ctx.beginPath();
-        ctx.moveTo(points[0].x + offset, points[0].y + offset);
+        ctx.moveTo(points[0].x + xoffset, points[0].y + yoffset);
         for(let j=1; j < points.length; j++){
-            ctx.lineTo(points[j].x + offset, points[j].y + offset);
+            ctx.lineTo(points[j].x + xoffset, points[j].y + yoffset);
         }
         ctx.closePath();
         ctx.fill();
@@ -45,7 +46,7 @@ export class RandomPolygon {
         ctx.fillStyle = '#000';
         for(let i=0; i < points.length ; i++){
             ctx.beginPath();
-            ctx.arc(points[i].x + offset, points[i].y + offset, 2, 0, 2*Math.PI);
+            ctx.arc(points[i].x + xoffset, points[i].y + yoffset, 2, 0, 2*Math.PI);
             ctx.fill();
             ctx.closePath();
         }
