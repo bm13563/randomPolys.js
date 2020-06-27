@@ -8,7 +8,7 @@ Considerably faster (albeit "less random") than angle ordering as in Pavel Valtr
 
 # Use
 ```javascript
-var polygon = new RandomPolygon(count, max, epsilon);
+var polygon = new RandomPolygon(count, xmax, ymax, epsilon);
 ```
 Where <strong>epsilon</strong> can be set to adjust the "regularity" of the polygon, with a higher epsilon tending to a square. Default value is 1.
 
