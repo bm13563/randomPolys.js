@@ -78,5 +78,5 @@ var RandomPolygon = function RandomPolygon(length, max, epsilon) {
 
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d');
-var polygon = new RandomPolygon(20, 300);
+var polygon = new RandomPolygon(10, 300);
 polygon.draw(ctx);
