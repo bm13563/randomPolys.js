@@ -11,3 +11,6 @@ Considerably faster (albeit "less random") than angle ordering as in Pavel Valtr
 var polygon = new RandomPolygon(count, max, epsilon);
 ```
 Where <strong>epsilon</strong> can be set to adjust the "regularity" of the polygon, with a higher epsilon tending to a square. Default value is 1.
+
+# Demo
+https://bm13563.github.io/randomPolys.js/
