@@ -3,11 +3,27 @@
     <meta charset="utf-8">
     <head>
         <title>randomPolys.js</title>
+        <link rel="stylesheet" href="./src/demo/index.css">
     </head>
 
     <body>
-        <canvas id="canvas" width="300" height="300"></canvas>
+        <canvas id="canvas" width="500" height="500"></canvas>
+
+        <p><strong>Number of points:</strong> <span id="points-value"></span></p>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="10" class="slider" id="points-range">
+        </div>
+
+        <p><strong>Max value:</strong> <span id="max-value"></span></p>
+        <div class="slidecontainer">
+            <input type="range" min="50" max="500" value="200" class="slider" id="max-range">
+        </div>
+
+        <p><strong>Epsilon:</strong> <span id="epsilon-value"></span></p>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="20" value="3" class="slider" id="epsilon-range">
+        </div>
     </body>
 
-    <script src="./build/bundle.js"></script>
+    <script src="./src/demo/bundle.js"></script>
 </html>
