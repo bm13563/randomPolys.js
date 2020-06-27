@@ -8,4 +8,4 @@ Considerably faster (although less random) than angle ordering as in Pavel Valtr
 # Polygon examples:
 10 Points: 
 
-![picture](src/img/10_pts_2.PNG)&nbsp; &nbsp; &nbsp; ![picture](src/img/10_pts.PNG)            ![picture](src/img/10_pts_3.PNG)
+![picture](src/img/10_pts_2.PNG)&nbsp; &nbsp; &nbsp; ![picture](src/img/10_pts.PNG)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ![picture](src/img/10_pts_3.PNG)
