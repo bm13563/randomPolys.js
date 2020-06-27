@@ -9,7 +9,7 @@ function _classCallCheck(instance, Constructor) {
 var RandomPolygon = function RandomPolygon(length, max) {
   var _this = this;
 
-  var epsilon = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+  var epsilon = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 4;
 
   _classCallCheck(this, RandomPolygon);
 
