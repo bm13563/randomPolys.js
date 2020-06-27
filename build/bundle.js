@@ -6,12 +6,15 @@ function _classCallCheck(instance, Constructor) {
   }
 }
 
-var RandomPolygon = function RandomPolygon(length, max, epsilon) {
+var RandomPolygon = function RandomPolygon(length, max) {
   var _this = this;
+
+  var epsilon = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
 
   _classCallCheck(this, RandomPolygon);
 
   this.generatePolygon = function () {
+    console.log(_this.epsilon);
     var theta = 360 / _this.length * (Math.PI / 180);
     var radius = _this.max / 2;
     var centre = {
@@ -20,7 +23,8 @@ var RandomPolygon = function RandomPolygon(length, max, epsilon) {
     };
 
     for (var i = 0; i < _this.length; i++) {
-      var random = Math.random();
+      var random = 1 - Math.pow(Math.random(), _this.epsilon);
+      console.log(random);
       var angle = i * theta;
       var randomAngle = angle + random * theta;
       var absCosAngle = Math.abs(Math.cos(randomAngle));
@@ -71,12 +75,12 @@ var RandomPolygon = function RandomPolygon(length, max, epsilon) {
 
   this.length = length;
   this.max = max;
-  this.epsilon;
+  this.epsilon = epsilon;
   this.polygon = [];
   this.generatePolygon();
 };
 
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d');
-var polygon = new RandomPolygon(10, 300);
+var polygon = new RandomPolygon(10, 300, 5);
 polygon.draw(ctx);

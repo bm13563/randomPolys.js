@@ -1,18 +1,20 @@
 export class RandomPolygon {
-    constructor(length, max, epsilon) {
+    constructor(length, max, epsilon=1) {
         this.length = length;
         this.max = max;
-        this.epsilon;
+        this.epsilon = epsilon;
         this.polygon = [];
         this.generatePolygon();
     }
 
     generatePolygon = () => {
+        console.log(this.epsilon);
         const theta = (360 / this.length) * (Math.PI/180);
         const radius = this.max/ 2;
         const centre = {x: radius, y: radius};
         for (let i = 0; i < this.length; i++) {
-            var random = Math.random();
+            var random = 1 - Math.pow(Math.random(), this.epsilon);
+            console.log(random)
             var angle = i * theta;
             var randomAngle = angle + (random * theta);
             var absCosAngle = Math.abs(Math.cos(randomAngle));
