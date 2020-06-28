@@ -5,7 +5,7 @@ A fast method of generating pseudo-random convex polygons in O(n) time, useful f
 
 Considerably faster (albeit "less random") than Pavel Valtr's theorum (see “Probability that n random points are in convex position.”, https://doi.org/10.1007/BF02574070) which runs in O(n log n) time.
 
-I have written and benchmarked both implementations for comparison here: https://jsben.ch/INKlV.
+I have written and benchmarked both implementations for comparison here: https://jsben.ch/4fgfo.
 
 # Use
 ```javascript
