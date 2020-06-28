@@ -71,5 +71,9 @@ document.getElementById("reset").onclick = function(e){
     document.getElementById("xmax-range").value = startXMax;
     document.getElementById("ymax-range").value = startYMax;
     document.getElementById("epsilon-range").value = startEpsilon;
+    length = startLength;
+    xmax = startXMax;
+    ymax = startYMax;
+    epsilon = startEpsilon;
 }
 

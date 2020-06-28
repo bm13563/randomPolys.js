@@ -50,7 +50,7 @@ var RandomPolygon = function RandomPolygon(length, xmax, ymax) {
   this.draw = function (ctx) {
     var points = _this.polygon;
     var xoffset = (ctx.canvas.clientWidth - _this.xmax) / 2;
-    var yoffset = (ctx.canvas.clientWidth - _this.ymax) / 2;
+    var yoffset = (ctx.canvas.clientHeight - _this.ymax) / 2;
     ctx.lineWidth = 1;
     ctx.fillStyle = '#f00';
     ctx.beginPath();

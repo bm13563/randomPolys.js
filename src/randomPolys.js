@@ -32,7 +32,7 @@ export class RandomPolygon {
     draw = (ctx) => {
         const points = this.polygon;
         const xoffset = (ctx.canvas.clientWidth - this.xmax) / 2;
-        const yoffset = (ctx.canvas.clientWidth - this.ymax) / 2;
+        const yoffset = (ctx.canvas.clientHeight - this.ymax) / 2;
         ctx.lineWidth= 1;
         ctx.fillStyle = '#f00';
         ctx.beginPath();
