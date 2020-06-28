@@ -1,7 +1,7 @@
 # randomPolys.js
 Generate random polygons efficiently in javascript. 
 
-A fast method of generating convex polygons in O(n) time, useful for testing spatial applications.
+A fast method of generating pseudo-random convex polygons in O(n) time, useful for testing spatial applications.
 
 Considerably faster (albeit "less random") than Pavel Valtr's theorum (see “Probability that n random points are in convex position.”, https://doi.org/10.1007/BF02574070) which runs in O(n log n) time.
 
