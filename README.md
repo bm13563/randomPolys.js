@@ -11,7 +11,7 @@ I have written and benchmarked both implementations for comparison here: https:/
 ```javascript
 var polygon = new RandomPolygon(count, xmax, ymax, epsilon);
 ```
-Where <strong>epsilon</strong> can be set to adjust the "regularity" of the polygon by narrowing the random distribution of vector lengths by ```y = x^(1 / epsilon)```. Default value is 1.
+Where <strong>epsilon</strong> adjusts the "regularity" of the polygon by narrowing the random distribution of vector lengths by ```y = x^(1 / epsilon)```. Default value is 1.
 
 # Demo
 https://bm13563.github.io/randomPolys.js/
