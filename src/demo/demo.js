@@ -18,7 +18,6 @@ document.getElementById("ymax-value").innerHTML = ymax;
 document.getElementById("epsilon-value").innerHTML = epsilon;
 
 var polygon = new rp.RandomPolygon(length, xmax, ymax, epsilon);
-console.log(polygon.polygon);
 polygon.draw(ctx);
 
 document.getElementById("points-range").oninput = function() {
