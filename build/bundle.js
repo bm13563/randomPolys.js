@@ -1,5 +1,7 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
     throw new TypeError("Cannot call a class as a function");
@@ -80,4 +82,4 @@ var RandomPolygon = function RandomPolygon(length, xmax, ymax) {
   this.generatePolygon();
 };
 
-var polygon = new RandomPolygon(10, 300, 300, 5);
+exports.RandomPolygon = RandomPolygon;
