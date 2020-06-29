@@ -13,5 +13,7 @@ var polygon = new RandomPolygon(count, xmax, ymax, epsilon);
 ```
 Where <strong>epsilon</strong> adjusts the "regularity" of the polygon by narrowing the random distribution of vector lengths by ```y = x^(1 / epsilon)```. Default value is 1.
 
+Can be imported into your project: https://bm13563.github.io/randomPolys.js/build/bundle.js
+
 # Demo
 https://bm13563.github.io/randomPolys.js/
