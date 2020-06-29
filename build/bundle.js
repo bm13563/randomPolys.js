@@ -79,3 +79,5 @@ var RandomPolygon = function RandomPolygon(length, xmax, ymax) {
   this.polygon = [];
   this.generatePolygon();
 };
+
+var polygon = new RandomPolygon(10, 300, 300, 5);
