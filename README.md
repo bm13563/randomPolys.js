@@ -7,6 +7,8 @@ Considerably faster (albeit "less random") than Pavel Valtr's theorum (see “Pr
 
 I have written and benchmarked both implementations for comparison here: https://jsben.ch/4fgfo.
 
+# Source
+
 ```html
 <script src="https://bm13563.github.io/randomPolys.js/build/bundle.js"></script>
 ```
