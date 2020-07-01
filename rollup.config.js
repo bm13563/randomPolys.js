@@ -15,8 +15,7 @@ export default [{
     input: 'src/demo/demo.js',
     output: {
       file: 'src/demo/bundle.js',
-      format: 'iife',
-      name: "rp",
+      format: 'cjs'
     },
     plugins: [
       babel({ babelHelpers: 'bundled' })
