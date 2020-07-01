@@ -1,6 +1,10 @@
 export const draw = (ctx, points) => {
-    const xoffset = Math.max.apply(Math, points.map(function(o) { return o.x; })) / 2;
-    const yoffset = Math.max.apply(Math, points.map(function(o) { return o.y; })) / 2;
+    const xmax = Math.max.apply(Math, points.map(function(o) { return o.x; }));
+    const ymax = Math.max.apply(Math, points.map(function(o) { return o.y; }));
+    const xmin = Math.min.apply(Math, points.map(function(o) { return o.x; }));
+    const ymin = Math.min.apply(Math, points.map(function(o) { return o.y; }));
+    const xoffset = (((ctx.canvas.clientWidth) - (xmax - xmin)) / 2) - xmin;
+    const yoffset = (((ctx.canvas.clientHeight) - (ymax - ymin)) / 2) - ymin;
     ctx.lineWidth= 1;
     ctx.fillStyle = '#f00';
     ctx.beginPath();

@@ -56,12 +56,20 @@ var RandomPolygon = function RandomPolygon(length, xmax, ymax) {
 };
 
 var draw = function draw(ctx, points) {
-  var xoffset = Math.max.apply(Math, points.map(function (o) {
+  var xmax = Math.max.apply(Math, points.map(function (o) {
     return o.x;
-  })) / 2;
-  var yoffset = Math.max.apply(Math, points.map(function (o) {
+  }));
+  var ymax = Math.max.apply(Math, points.map(function (o) {
     return o.y;
-  })) / 2;
+  }));
+  var xmin = Math.min.apply(Math, points.map(function (o) {
+    return o.x;
+  }));
+  var ymin = Math.min.apply(Math, points.map(function (o) {
+    return o.y;
+  }));
+  var xoffset = (ctx.canvas.clientWidth - (xmax - xmin)) / 2 - xmin;
+  var yoffset = (ctx.canvas.clientHeight - (ymax - ymin)) / 2 - ymin;
   ctx.lineWidth = 1;
   ctx.fillStyle = '#f00';
   ctx.beginPath();
