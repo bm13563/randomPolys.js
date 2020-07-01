@@ -16,7 +16,7 @@ I have written and benchmarked both implementations for comparison here: https:/
 # Use
 
 ```javascript
-var polygon = new RandomPolygon(count, xmax, ymax, epsilon);
+var polygon = new rp.RandomPolygon(count, xmax, ymax, epsilon);
 console.log(polygon.polygon);
 ```
 Where <strong>epsilon</strong> adjusts the "regularity" of the polygon by narrowing the random distribution of vector lengths by ```y = x^(1 / epsilon)```. Default value is 1.
