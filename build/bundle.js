@@ -49,31 +49,6 @@ var RandomPolygon = function RandomPolygon(length, xmax, ymax) {
     }
   };
 
-  this.draw = function (ctx) {
-    var points = _this.polygon;
-    var xoffset = (ctx.canvas.clientWidth - _this.xmax) / 2;
-    var yoffset = (ctx.canvas.clientHeight - _this.ymax) / 2;
-    ctx.lineWidth = 1;
-    ctx.fillStyle = '#f00';
-    ctx.beginPath();
-    ctx.moveTo(points[0].x + xoffset, points[0].y + yoffset);
-
-    for (var j = 1; j < points.length; j++) {
-      ctx.lineTo(points[j].x + xoffset, points[j].y + yoffset);
-    }
-
-    ctx.closePath();
-    ctx.fill();
-    ctx.fillStyle = '#000';
-
-    for (var i = 0; i < points.length; i++) {
-      ctx.beginPath();
-      ctx.arc(points[i].x + xoffset, points[i].y + yoffset, 2, 0, 2 * Math.PI);
-      ctx.fill();
-      ctx.closePath();
-    }
-  };
-
   this.length = length;
   this.xmax = xmax;
   this.ymax = ymax;

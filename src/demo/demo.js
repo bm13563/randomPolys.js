@@ -1,4 +1,5 @@
 import * as rp from "../randomPolys.js";
+import * as util from "../utils.js";
 
 const canvas=document.getElementById("canvas")
 const ctx = canvas.getContext('2d');
@@ -18,14 +19,14 @@ document.getElementById("ymax-value").innerHTML = ymax;
 document.getElementById("epsilon-value").innerHTML = epsilon;
 
 var polygon = new rp.RandomPolygon(length, xmax, ymax, epsilon);
-polygon.draw(ctx);
+util.draw(ctx, polygon.polygon);
 
 document.getElementById("points-range").oninput = function() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     length = this.value;
     document.getElementById("points-value").innerHTML = length;
     var polygon = new rp.RandomPolygon(length, xmax, ymax, epsilon);
-    polygon.draw(ctx);
+    util.draw(ctx, polygon.polygon);
 }
 
 document.getElementById("xmax-range").oninput = function() {
@@ -33,7 +34,7 @@ document.getElementById("xmax-range").oninput = function() {
     xmax = this.value;
     document.getElementById("xmax-value").innerHTML = xmax;
     var polygon = new rp.RandomPolygon(length, xmax, ymax, epsilon);
-    polygon.draw(ctx);
+    util.draw(ctx, polygon.polygon);
 }
 
 document.getElementById("ymax-range").oninput = function() {
@@ -41,7 +42,7 @@ document.getElementById("ymax-range").oninput = function() {
     ymax = this.value;
     document.getElementById("ymax-value").innerHTML = ymax;
     var polygon = new rp.RandomPolygon(length, xmax, ymax, epsilon);
-    polygon.draw(ctx);
+    util.draw(ctx, polygon.polygon);
 }
 
 document.getElementById("epsilon-range").oninput = function() {
@@ -49,19 +50,19 @@ document.getElementById("epsilon-range").oninput = function() {
     epsilon = this.value;
     document.getElementById("epsilon-value").innerHTML = epsilon;
     var polygon = new rp.RandomPolygon(length, xmax, ymax, epsilon);
-    polygon.draw(ctx);
+    util.draw(ctx, polygon.polygon);
 }
 
 document.getElementById("new-polygon").onclick = function(e){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     var polygon = new rp.RandomPolygon(length, xmax, ymax, epsilon);
-    polygon.draw(ctx);
+    util.draw(ctx, polygon.polygon);
 }
 
 document.getElementById("reset").onclick = function(e){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     var polygon = new rp.RandomPolygon(startLength, startXMax, startYMax, startEpsilon);
-    polygon.draw(ctx);
+    util.draw(ctx, polygon.polygon);
     document.getElementById("points-value").innerHTML = startLength;
     document.getElementById("xmax-value").innerHTML = startXMax;
     document.getElementById("ymax-value").innerHTML = startYMax;
