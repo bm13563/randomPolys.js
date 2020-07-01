@@ -5,8 +5,7 @@ export default [{
   input: 'src/randomPolys.js',
   output: {
     file: 'build/bundle.js',
-    format: 'iife',
-    name: "RandomPolys"
+    format: 'cjs',
   },
   plugins: [
     babel({ babelHelpers: 'bundled' })
@@ -15,8 +14,7 @@ export default [{
     input: 'src/demo/demo.js',
     output: {
       file: 'src/demo/bundle.js',
-      format: 'iife',
-      name: "RandomPolys"
+      format: 'cjs',
     },
     plugins: [
       babel({ babelHelpers: 'bundled' })
