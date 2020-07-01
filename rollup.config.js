@@ -6,6 +6,7 @@ export default [{
   output: {
     file: 'build/bundle.js',
     format: 'iife',
+    name: "rp",
   },
   plugins: [
     babel({ babelHelpers: 'bundled' })
@@ -15,6 +16,7 @@ export default [{
     output: {
       file: 'src/demo/bundle.js',
       format: 'iife',
+      name: "rp",
     },
     plugins: [
       babel({ babelHelpers: 'bundled' })

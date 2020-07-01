@@ -1,4 +1,4 @@
-(function (exports) {
+var rp = (function (exports) {
   'use strict';
 
   function _classCallCheck(instance, Constructor) {
