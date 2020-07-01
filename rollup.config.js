@@ -5,7 +5,7 @@ export default [{
   input: 'src/randomPolys.js',
   output: {
     file: 'build/bundle.js',
-    format: 'cjs',
+    format: 'es',
   },
   plugins: [
     babel({ babelHelpers: 'bundled' })
@@ -14,7 +14,7 @@ export default [{
     input: 'src/demo/demo.js',
     output: {
       file: 'src/demo/bundle.js',
-      format: 'cjs',
+      format: 'es',
     },
     plugins: [
       babel({ babelHelpers: 'bundled' })
