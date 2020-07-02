@@ -14,7 +14,7 @@ I have written and benchmarked both implementations for comparison here: https:/
 ```
 or
 ```javascript
-npm i randompolys
+npm install randompolys
 ```
 
 # Use
