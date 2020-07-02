@@ -9,19 +9,24 @@ I have written and benchmarked both implementations for comparison here: https:/
 
 # Source
 
-```html
-<script src="https://bm13563.github.io/randomPolys.js/build/bundle.js"></script>
-```
-or
 ```javascript
+// URL
+<script src="https://bm13563.github.io/randomPolys.js/build/bundle.js"></script>
+
+// NODE
 npm install randompolys
 ```
 
 # Use
 
 ```javascript
+// FROM URL
 var polygon = new rp.RandomPolygon(count, xmax, ymax, epsilon);
 console.log(polygon.polygon);
+
+// FROM NODE
+var rp = require('randompolys/build/bundle');
+console.log(new rp.RandomPolygon(count, xmax, ymax, epsilon).polygon)
 ```
 Where <strong>epsilon</strong> adjusts the "regularity" of the polygon by narrowing the random distribution of vector lengths by ```y = x^(1 / epsilon)```. Default value is 1.
 
