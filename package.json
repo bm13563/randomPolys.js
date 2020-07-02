@@ -1,6 +1,6 @@
 {
   "name": "randompolys",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A quick and dirty way of generating pseudo-random, convex polygons for testing spatial applications",
   "main": "index.js",
   "scripts": {
