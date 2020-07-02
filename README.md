@@ -12,6 +12,10 @@ I have written and benchmarked both implementations for comparison here: https:/
 ```html
 <script src="https://bm13563.github.io/randomPolys.js/build/bundle.js"></script>
 ```
+or
+```javascript
+npm i randompolys
+```
 
 # Use
 
