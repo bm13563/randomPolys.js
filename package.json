@@ -1,6 +1,6 @@
 {
   "name": "randompolys",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A quick and dirty way of generating pseudo-random, convex polygons for testing spatial applications",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,11 @@
     "type": "git",
     "url": "git+https://github.com/bm13563/randomPolys.js.git"
   },
+  "keywords": [
+    "polygons",
+    "random",
+    "geometry"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
