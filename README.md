@@ -17,6 +17,8 @@ I have written and benchmarked both implementations for comparison here: https:/
 npm install randompolys
 ```
 
+NPM package info: https://www.npmjs.com/package/randompolys.
+
 # Use
 
 ```javascript
