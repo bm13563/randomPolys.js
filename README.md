@@ -27,7 +27,7 @@ console.log(polygon.polygon);
 // FROM NODE
 var rp = require('randompolys/build/bundle');
 var polygon = new rp.RandomPolygon(count, xmax, ymax, epsilon);
-console.log(polygon.polygon)
+console.log(polygon.polygon);
 ```
 Where <strong>epsilon</strong> adjusts the "regularity" of the polygon by narrowing the random distribution of vector lengths by ```y = x^(1 / epsilon)```. Default value is 1.
 
