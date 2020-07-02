@@ -1,7 +1,7 @@
 {
   "name": "randompolys",
-  "version": "1.0.3",
-  "description": "A quick and dirty way of generating pseudo-random, convex polygons for testing spatial applications",
+  "version": "1.0.4",
+  "description": "Generate random polygons efficiently in javascript.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
