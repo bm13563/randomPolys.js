@@ -1,5 +1,5 @@
 import { draw } from "./utils.js";
-import * as rp from "../../index.js";
+import RandomPolygon from "../../index.js";
 
 const canvas = document.getElementById("canvas")
 const ctx = canvas.getContext('2d');
@@ -13,14 +13,14 @@ const startEpsilon = epsilon;
 document.getElementById("points-value").innerHTML = length;
 document.getElementById("epsilon-value").innerHTML = epsilon;
 
-const polygon = new rp.RandomPolygon(length, bounds, epsilon);
+const polygon = new RandomPolygon(length, bounds, epsilon);
 draw(ctx, polygon.polygon);
 
 document.getElementById("points-range").oninput = function()  {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     length = this.value;
     document.getElementById("points-value").innerHTML = length;
-    const polygon = new rp.RandomPolygon(length, bounds, epsilon);
+    const polygon = new RandomPolygon(length, bounds, epsilon);
     draw(ctx, polygon.polygon);
 }
 
@@ -28,19 +28,19 @@ document.getElementById("epsilon-range").oninput = function()  {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     epsilon = this.value;
     document.getElementById("epsilon-value").innerHTML = epsilon;
-    const polygon = new rp.RandomPolygon(length, bounds, epsilon);
+    const polygon = new RandomPolygon(length, bounds, epsilon);
     draw(ctx, polygon.polygon);
 }
 
 document.getElementById("new-polygon").onclick = function() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    const polygon = new rp.RandomPolygon(length, bounds, epsilon);
+    const polygon = new RandomPolygon(length, bounds, epsilon);
     draw(ctx, polygon.polygon);
 }
 
 document.getElementById("reset").onclick = function() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    const polygon = new rp.RandomPolygon(startLength, bounds, startEpsilon);
+    const polygon = new RandomPolygon(startLength, bounds, startEpsilon);
     draw(ctx, polygon.polygon);
     document.getElementById("points-value").innerHTML = startLength;
     document.getElementById("epsilon-value").innerHTML = startEpsilon;

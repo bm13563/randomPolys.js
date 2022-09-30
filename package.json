@@ -1,6 +1,5 @@
 {
   "name": "randompolys",
-  "private": true,
   "version": "1.0.5",
   "description": "A simple random polygon generator",
   "main": "index.js",

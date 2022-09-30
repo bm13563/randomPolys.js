@@ -1,4 +1,4 @@
-export class RandomPolygon {
+class RandomPolygon {
   constructor(length, bounds, epsilon=1) {
     this.length = length;
     const {topLeft, bottomRight} = bounds;
@@ -31,3 +31,5 @@ export class RandomPolygon {
     }
   }
 }
+
+export default RandomPolygon;

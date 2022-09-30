@@ -22,18 +22,24 @@ NPM package info: https://www.npmjs.com/package/randompolys.
 # Usage
 
 ```javascript
-var polygon = new rp.RandomPolygon(count, bounds, epsilon);
-console.log(polygon.polygon);
+import RandomPolygon from "randompolys";
 
-// OR
+const count = 35;
+const bounds = {
+  topLeft: [50, 50],
+  bottomLeft: [250, 250],
+}
+const epsilon = 3;
 
-var rp = require('randompolys/build/bundle');
-var polygon = new rp.RandomPolygon(count, bounds, epsilon);
+const polygon = new RandomPolygon(count, bounds, epsilon);
 console.log(polygon.polygon);
 ```
+
+**Count** is the number of points in the polygon
+
 **Bounds** is an object in the form `{topLeft: [x, y], bottomRight[x, y]}` that defines the limits of the polygon. This can be used to set the size and location of the polygons in the available space
 
-**Epsilon** adjusts the "regularity" of the polygon by narrowing the random distribution of vector lengths by ```y = x^(1 / epsilon)```. Default value is 1.
+**Epsilon** adjusts the "regularity" of the polygon by narrowing the random distribution of vector lengths by ```y = x^(1 / epsilon)```. Default value is 1
 
 # Demo
 https://bm13563.github.io/randomPolys.js/
