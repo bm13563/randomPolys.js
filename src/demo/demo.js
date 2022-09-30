@@ -3,7 +3,7 @@ import RandomPolygon from "../../index.js";
 
 const canvas = document.getElementById("canvas")
 const ctx = canvas.getContext('2d');
-const bounds = {topLeft: {x: 0, y: 0}, bottomRight: {x: canvas.width, y: canvas.height}};
+const bounds = {topLeft: {x: 0, y: 0}, bottomRight: {x: 450, y: 450}};
 
 let length = document.getElementById("points-range").value;
 let epsilon = document.getElementById("epsilon-range").value;
