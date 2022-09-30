@@ -1,32 +1,20 @@
 {
-  "name": "randompolys",
-  "version": "1.0.4",
-  "description": "Generate random polygons efficiently in javascript.",
+  "name": "randompolys-js",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A simple random polygon generator",
   "main": "index.js",
+  "license": "MIT",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bm13563/randomPolys.js.git"
-  },
-  "keywords": [
-    "polygons",
-    "random",
-    "geometry"
-  ],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bm13563/randomPolys.js/issues"
-  },
-  "homepage": "https://github.com/bm13563/randomPolys.js#readme",
   "devDependencies": {
-    "@babel/core": "^7.10.3",
-    "@babel/preset-env": "^7.10.3",
-    "@rollup/plugin-babel": "^5.0.4",
-    "@rollup/plugin-node-resolve": "^8.1.0",
-    "rollup": "^2.18.1"
-  }
+    "eslint": "^8.24.0",
+    "prettier": "^2.7.1",
+    "vite": "^3.1.0"
+  },
+  "dependencies": {}
 }

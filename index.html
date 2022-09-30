@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="utf-8">
-    <head>
+  <head>
+        <meta charset="utf-8">
         <title>randomPolys.js</title>
         <link rel="stylesheet" href="./src/demo/index.css">
+        <script type="module" src="./src/demo/demo.js"></script>
     </head>
 
     <body>
@@ -12,16 +13,6 @@
         <p><strong>Number of points:</strong> <span id="points-value"></span></p>
         <div class="slidecontainer">
             <input type="range" min="3" max="100" value="10" class="slider" id="points-range">
-        </div>
-
-        <p><strong>Max X:</strong> <span id="xmax-value"></span></p>
-        <div class="slidecontainer">
-            <input type="range" min="50" max="450" value="200" class="slider" id="xmax-range">
-        </div>
-
-        <p><strong>Max Y:</strong> <span id="ymax-value"></span></p>
-        <div class="slidecontainer">
-            <input type="range" min="50" max="450" value="200" class="slider" id="ymax-range">
         </div>
 
         <p><strong>Epsilon:</strong> <span id="epsilon-value"></span></p>
@@ -34,5 +25,4 @@
         <button id="reset">Reset</button>
     </body>
 
-    <script src="./src/demo/bundle.js"></script>
 </html>
