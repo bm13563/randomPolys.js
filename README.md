@@ -19,11 +19,13 @@ npm install randompolys
 
 NPM package info: https://www.npmjs.com/package/randompolys.
 
-# Use
+# Usage
 
 ```javascript
 var polygon = new rp.RandomPolygon(count, bounds, epsilon);
 console.log(polygon.polygon);
+
+// OR
 
 var rp = require('randompolys/build/bundle');
 var polygon = new rp.RandomPolygon(count, bounds, epsilon);
