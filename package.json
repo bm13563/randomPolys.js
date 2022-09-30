@@ -1,6 +1,6 @@
 {
   "name": "randompolys",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A simple random polygon generator",
   "main": "index.js",
   "license": "MIT",

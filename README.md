@@ -7,17 +7,21 @@ Considerably faster (albeit "less random") than Pavel Valtr's theorum (see “Pr
 
 I have written and benchmarked both implementations for comparison here: https://jsben.ch/4fgfo.
 
-# Source
+# Installation
 
-```javascript
-// URL
-<script src="https://bm13563.github.io/randomPolys.js/build/bundle.js"></script>
+Install with NPM or Yarn
 
-// NODE
+```bash
 npm install randompolys
 ```
 
-NPM package info: https://www.npmjs.com/package/randompolys.
+```bash
+yarn add randompolys
+```
+
+NPM package info: https://www.npmjs.com/package/randompolys
+
+Yarn package info: https://yarnpkg.com/?q=randompolys
 
 # Usage
 
@@ -37,7 +41,7 @@ console.log(polygon.polygon);
 
 **Count** is the number of points in the polygon
 
-**Bounds** is an object in the form `{topLeft: [x, y], bottomRight[x, y]}` that defines the limits of the polygon. This can be used to set the size and location of the polygons in the available space
+**Bounds** is an object in the form `{topLeft: [x, y], bottomRight: [x, y]}` that defines the limits of the polygon. This can be used to set the size and location of the polygons in the available space
 
 **Epsilon** adjusts the "regularity" of the polygon by narrowing the random distribution of vector lengths by ```y = x^(1 / epsilon)```. Default value is 1
 
